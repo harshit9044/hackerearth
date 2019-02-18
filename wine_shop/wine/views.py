@@ -1,7 +1,9 @@
 from .models import Wine
 from django.shortcuts import render
 from .filters import WineFilter
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def search(request):
     if request.method == 'GET':
         wine_list = Wine.objects.all()

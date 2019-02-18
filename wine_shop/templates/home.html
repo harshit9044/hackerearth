@@ -8,10 +8,14 @@
 <span ><a href="{% url 'wine:search' %}">See list of wines here </a></span>
 
 {% if user.is_authenticated %}
-  Hi {{ user.username }}!
+<br>
+  <h2> Hi {{ user.username }}!</h2>
   <p><a href="{% url 'logout' %}">logout</a></p>
 {% else %}
   <p>You are not logged in</p>
   <a href="{% url 'login' %}">login</a>
+  <br>
+  <p>Or</p>
+  <a href="{% url 'signup' %}">Signup</a>
 {% endif %}
 {% endblock %}
