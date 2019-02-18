@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+    {% block content %}
+
+    <form method="get">
+        {{ filter.form.as_p }}
+
+        <button type="submit">Search</button>
+
+    </form>
+
+    <ul>
+        {% for wine in filter.qs %}
+
+            <li>
+                {{ wine.country }}
+            </li>
+        {% endfor %}
+
+    </ul>
+    {% endblock %}

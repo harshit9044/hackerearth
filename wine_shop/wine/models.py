@@ -12,3 +12,6 @@ class Wine(models.Model):
     region_2 = models.CharField(max_length=500,blank=True)
     variety = models.CharField(max_length=500, blank=True)
     winery = models.CharField(max_length=500, blank=True)
+
+    def __str__(self):
+        return self.country

@@ -1,0 +1,12 @@
+{{ filter.form }}
+
+
+<ul>
+    {%   for wine in filter.qs %}
+
+    <li>
+        <a href="{% url 'wine:detail' wine.id %}">{{ wine.title }}</a>
+    </li>
+    {% endfor %}
+
+</ul>
