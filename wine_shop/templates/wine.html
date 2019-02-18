@@ -14,7 +14,16 @@
         {% for wine in filter.qs %}
 
             <li>
-                {{ wine.country }}
+                <b>Country: </b> {{ wine.country }} <br>
+                <b>Price: </b> {{ wine.price }} <br>
+                 <b>Description: </b> {{ wine.description }} <br>
+                 <b>Designation: </b> {{ wine.designation }} <br>
+                 <b>Points: </b> {{ wine.points }} <br>
+                 <b>Province: </b> {{ wine.province  }} <br>
+                 <b>Region_1: </b> {{ wine.region_1 }} <br>
+                  <b>Region_2: </b>{{ wine.region_2 }} <br>
+                 <b>Variety: </b> {{ wine.variety }} <br>
+                 <b>Winery: </b> {{ wine.winery }} <br>
             </li>
         {% endfor %}
 

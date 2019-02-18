@@ -6,4 +6,4 @@ class WineFilter(django_filters.FilterSet):
 
     class Meta:
         model = Wine
-        fields = ['country']
+        fields = ['country', 'price', 'points']

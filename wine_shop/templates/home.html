@@ -4,6 +4,9 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
+<h1> Welcome to Wine shop</h1>
+<span ><a href="{% url 'wine:search' %}">See list of wines here </a></span>
+
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
   <p><a href="{% url 'logout' %}">logout</a></p>
